@@ -27,7 +27,6 @@ export class Alert extends LitElement {
         z-index: 100;
         opacity: 1.0;
       }
-
       .alert-wrapper {
         display: flex;
         justify-content: center;
@@ -36,7 +35,6 @@ export class Alert extends LitElement {
         width: 100%;
         margin-bottom: 8px;
       }
-
       .message-wrap {
         background-color: white;
         transform: skew(20deg);
@@ -44,45 +42,36 @@ export class Alert extends LitElement {
         text-align: center;
         width: 50%;
         height: 100%;
-        
       }
-
       :host([date]){
         color: black;
-
       }
-
       .campus-alert {
         font-size: 1em;
         display: block;
         padding: 16px;
         width: 100%;
       }
-
       .message {
         font-size: 20px;
         color: white;
         transform: skew(-20deg);
       }
-
       .date {
         transform: skew(0deg);
         width: 15%;
         font-weight: bold;
         
       }
-
       .button-wrapper {
         width: 15%;
       }
-
       button {
         font-weight: bold;
         float: right;
         padding: 10px;
         margin: 4px;
     }
-
     .closed-toggle-button {
       display: flex;
       align-items: center;
@@ -90,9 +79,6 @@ export class Alert extends LitElement {
       font-size: 30px;
       
     }
-
-    
-    
     .closedContainer {
       display: flex;
       align-items: center;
@@ -149,7 +135,6 @@ export class Alert extends LitElement {
         if(this.issueLevel === "notice") color = "#0096FF";
         if(this.issueLevel === "warning") color = "orange";
         if(this.issueLevel === "alert") color = "red";
-        if(this.issueLevel === "welcome") color = "grey";
 
         if(this.issueLevel === "welcome") (this.message) = "Welcome!";
         if(this.issueLevel === "notice") (this.message) = "Small notice: watch out for this today.";
