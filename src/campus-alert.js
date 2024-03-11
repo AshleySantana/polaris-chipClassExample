@@ -14,7 +14,6 @@ export class Alert extends LitElement {
     this.opened = true;
     if (localStorage.getItem('campus-alert-opened-state') == "false"){
       this.opened = false;
-
     }
     this.date = '';
   }
@@ -117,9 +116,8 @@ export class Alert extends LitElement {
         return html `
         <div class="alert-wrapper ${(this.sticky) ? "sticky" : ""}">
           <div class="date">${this.date}</div>
-
           <div class="message-wrap">
-            <div class="campus-alert " style="background-color:${color}">
+            <div class="campus-alert" style="background-color:${color}">
              <div class="message"><svg xmlns="http://www.w3.org/2000/svg" style="height: 30px; width: 30px; align-items: center;" viewBox="0 0 24 24"><title>alert-circle-outline</title><path d="M11,15H13V17H11V15M11,7H13V13H11V7M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20Z" /></svg>
                ${this.message} </div>
               </div>
